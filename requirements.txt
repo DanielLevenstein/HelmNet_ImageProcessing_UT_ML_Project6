@@ -1,0 +1,9 @@
+ tensorflow
+ scikit-learn
+ opencv-python
+ seaborn==0.13.2
+ matplotlib==3.10.0
+ numpy==2.2.6
+ pandas==2.2.2
+protobuf~=6.33.4
+scipy~=1.17.0
