@@ -2,7 +2,7 @@
 ## **Business Context**
 Workplace safety in hazardous environments like construction sites and industrial plants is crucial to prevent accidents and injuries. One of the most important safety measures is ensuring workers wear safety helmets, which protect against head injuries from falling objects and machinery. Non-compliance with helmet regulations increases the risk of serious injuries or fatalities, making effective monitoring essential, especially in large-scale operations where manual oversight is prone to errors and inefficiency.
 
-To overcome these challenges, SafeGuard Corp plans to develop an automated image analysis system capable of detecting whether workers are wearing safety helmets. This system will improve safety enforcement, ensuring compliance and reducing the risk of head injuries. By automating helmet monitoring, SafeGuard aims to enhance efficiency, scalability, and accuracy, ultimately fostering a safer work environment while minimizing human error in safety oversight.
+To overcome these challenges, SafeGuard Corp plans to develop an automated image analysis system capable of detecting whether workers are wearing safety helmets. This system will improve safety enforcement, ensuring compliance, and reducing the risk of head injuries. By automating helmet monitoring, SafeGuard aims to enhance efficiency, scalability, and accuracy, ultimately fostering a safer work environment while minimizing human error in safety oversight.
 ## **Objective**
 As a data scientist at SafeGuard Corp, you are tasked with developing an image classification model that classifies images into one of two categories:
 - **With Helmet:** Workers wearing safety helmets.
@@ -26,3 +26,13 @@ The dataset consists of **631 images**, equally divided into two categories:
 | Model 2 | 0.578125 |
 | Model 3 | 0.984375 |
 | Model 4 | 1.000000 |
+
+### Additional Observations
+- The success_threshold used has a large impact on the final model accuracy scores.
+- I initially used a success_threshold of 50% and then changed it to 95% to prevent overfitting. 
+- Using too low of a value for success_threshold resulted in significant model overfitting.
+- I believe that a value in between those two values is likely to result in the best results. 
+
+# **Actionable Insights & Recommendations**
+- Based on the model visualization for model 2 and model 3, it looks like model 3 is heavily overfit, so trying a version of model 2 with a success_threshold between 95% and 50% might make sense. 
+
