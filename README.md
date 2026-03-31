@@ -43,17 +43,9 @@ The dataset consists of **631 images**, equally divided into two categories:
 The final model from this project has been deployed on HuggingFace with a StreamLit API:
 https://huggingface.co/spaces/DanielLevenstein/Helmet_Image_Classification
 
-The model accepts RGB images with shape: `200 × 200 × 3`
-
 ### Prediction Threshold
 
-To reduce false positives, the deployed model uses a strict prediction threshold:
-
-- Helmet: probability >= 0.85
-- Unknown: 0.15 < probability < 0.85
-- No Helmet: probability <= 0.15
-
-This value was originally .95 in the training notebook but was changed after seeing the model performance on unseen data.
+The initial project uses a prediction threshold of .95% This was intended to counteract the low quality test data provided as part of the project and was later removed once better data was found. 
 
 ## Conclusion
 
